@@ -1,8 +1,7 @@
-function bisextile(année) {
-    if ((année % 4 == 0 && année % 100 != 0) || année % 400 == 0) {
-        return true;
-    } else {
-        return false;
+function afficherJoursSemaines(){
+    const joursSemaines = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+    for (let i = 0; i < joursSemaines.length; i++){
+        console.log(joursSemaines[i]);
     }
 }
-console.log("L'année 2025 est-elle bissextile ?" + bisextile(2025));
+afficherJoursSemaines();
