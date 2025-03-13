@@ -2,14 +2,13 @@ document.getElementById('button').addEventListener('click', function(){
     fetch('expression.txt')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Erreur');
+                throw new Error('Erreur reseau');
             }
-            return response.text();
+            return response.text(); 
         })
-        .then(data => {
-            document.getElementById('expression').textContent = data;
+        .then(data =>{
+            let paragraph = document.getElementById('expression');
+            paragraph.textContent=data; 
         })
-        .catch(error => {
-            console.error("Erreur :", error);
-        });
+        .catch(error => console.error("Erreur :", error));
 });
