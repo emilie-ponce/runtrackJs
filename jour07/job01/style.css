@@ -73,3 +73,14 @@ button{
     border: solid 3px #2781cf
 }
 
+/*BAS DE PAGE*/
+footer{
+    background-color: #2781cf;
+    padding: 20px;
+    margin-top: 5%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
