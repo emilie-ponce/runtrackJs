@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*HAUT DE PAGE*/
+header{
+    background-color: #3bd242;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#job{
+    color: white;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 11px;
+    border: solid white;
+    border-radius: 10px;
+    padding: 5%;
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+}

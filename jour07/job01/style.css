@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*HAUT DE PAGE*/
+header{
+    background-color: #2781cf;
+    padding: 20px;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*FORMULAIRE*/
+h5{
+    text-align: center;
+    margin: 5%;
+    font-size: 24px;
+    color: #2781cf;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+.premier{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    border: solid 3px #2781cf;
+    border-radius: 40px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+select{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 3px #2781cf;
+}
+label{
+    padding-top: 5%;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 3px #2781cf
+}
+.deuxieme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 3px #2781cf
+}
+

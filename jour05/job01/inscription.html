@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>Job01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--HAUT DE PAGE-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inscription.html">Inscription</a></li>
+                <p id="job">Job05</p>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--FORMULAIRE-->
+    <form action="inscription.php" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required><br>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required><br>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="mail" required><br>
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" required><br>
+        <label for="code_postal">Code postal</label>
+        <input type="text" id="code_postal" name="code_postal" required><br>
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
