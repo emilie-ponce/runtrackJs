@@ -10,31 +10,30 @@
 <body>
 
 <!--HAUT DE PAGE-->    
-<header class="blue lighten-2">
-    <nav class="nav-wrapper blue lighten-2">
-        <div class="text-align: center">
-            <ul class="center-align">
-                <li><a href="index.php" class="white-text">Accueil</a></li>
-                <li><a href="index.php" class="white-text">Inscription</a></li>
-                <li><a href="index.php" class="white-text">Connexion</a></li>
-                <li><a href="index.php" class="white-text">Rechercher</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
+    <header class="blue lighten-2">
+        <nav class="nav-wrapper blue lighten-2">
+            <div class="text-align: center">
+                <ul class="center-align">
+                    <li><a href="index.php" class="white-text">Accueil</a></li>
+                    <li><a href="index.php" class="white-text">Inscription</a></li>
+                    <li><a href="index.php" class="white-text">Connexion</a></li>
+                    <li><a href="index.php" class="white-text">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 <!--FORMULAIRE-->
     <h5>Création de compte</h5>
     <section>
         <form action="" method="POST">
-            <label for="civilite">Civilité :</label><br>
-            <select name="civilite" id="civilite" required>
-                <option value="monsieur">Monsieur</option>
-                <option value="madame">Madame</option>
-                <option value="autre">Autre</option>
-            </select>
-            <br><br>
+            <fieldset>
+                <legend>Civilité</legend>
+                <label><input type="radio" name="civilite" value="monsieur" required> Monsieur</label>
+                <label><input type="radio" name="civilite" value="madame" required> Madame</label>
+                <label><input type="radio" name="civilite" value="autre" required> Autre</label>
+            </fieldset>
+            <br>
             <label for="prenom">Prénom :</label><br>
             <input type="text" id="prenom" name="prenom" required><br><br>
             <label for="nom">Nom :</label><br>
@@ -49,25 +48,28 @@
             <input type="password" id="confirm-password" name="confirm-password" required><br><br>
             <p>Passions :</p>
             <label for="informatique">Informatique</label><br>
-            <input type="checkbox" id="voyages" name="passions" value="voyages">
+            <input type="checkbox" id="informatique" name="passions" value="informatique">
             <label for="voyages">Voyages</label><br>
-            <input type="checkbox" id="sport" name="passions" value="sport">
+            <input type="checkbox" id="voyages" name="passions" value="voyages">
             <label for="sport">Sport</label><br>
-            <input type="checkbox" id="lecture" name="passions" value="lecture">
-            <label for="lecture">Lecture</label><br><br>
+            <input type="checkbox" id="sport" name="passions" value="sport">
+            <label for="lecture">Lecture</label><br>
+            <input type="checkbox" id="lecture" name="passions" value="lecture"><br><br>
             <button type="submit">Valider</button>
         </form>
     </section>
 
 <!--BAS DE PAGE-->
-    <footer class="nav-wrapper">
-        <nav>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="index.php">Inscription</a></li>
-                <li><a href="index.php">Connexion</a></li>
-                <li><a href="index.php">Rechercher</a></li>
-            </ul>    
+    <footer class="blue lighten-2">
+        <nav class="nav-wrapper blue lighten-2">
+            <div class="center-align">
+                <ul>
+                    <li><a href="index.php" class="white-text">Accueil</a></li>
+                    <li><a href="index.php" class="white-text">Inscription</a></li>
+                    <li><a href="index.php" class="white-text">Connexion</a></li>
+                    <li><a href="index.php" class="white-text">Rechercher</a></li>
+                </ul>
+            </div>
         </nav>
     </footer>
 
