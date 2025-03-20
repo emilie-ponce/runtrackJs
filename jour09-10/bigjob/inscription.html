@@ -14,13 +14,13 @@
 <body>
 
 <!--HAUT DE PAGE-->
-<header class="bg-primary text-white p-1">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" href="index.html">La Plateforme</a>
-        </div>
-    </nav>
-</header>
+    <header class="bg-primary text-white p-1">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand" href="index.html">La Plateforme</a>
+            </div>
+        </nav>
+    </header>
 
 <!--CONTENU DE LA PAGE-->
     <div class="container mt-5 border border-black">
@@ -50,18 +50,18 @@
             return domain === 'laplateforme.io';
         }
 
-        form.addEventListener('submit', async (e) => {
+        form.addEventListener('submit', async (e) =>{
             e.preventDefault();
 
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            if (!isValidDomain(email)) {
+            if (!isValidDomain(email)){
                 message.textContent = "Seuls les membres de La Plateforme peuvent créer un compte.";
                 message.style.color = "red";
                 return;
             }
-            if (password.length < 8) {
+            if (password.length < 8){
                 message.textContent = "Le mot de passe doit contenir au moins 8 caractères.";
                 message.style.color = "red";
                 return;
