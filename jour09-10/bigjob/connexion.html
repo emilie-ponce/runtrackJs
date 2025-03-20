@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <!-- Lien vers le CSS de Bootstrap -->
+    <!-- Lien vers le CSS de Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!--HAUT DE PAGE-->
-<header class="bg-primary text-white p-1">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid justify-content-center">
-            <a class="navbar-brand" href="index.html">La Plateforme</a>
-        </div>
-    </nav>
-</header>
+<!-- HAUT DE PAGE -->
+    <header class="bg-primary text-white p-1">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand" href="index.html">La Plateforme</a>
+            </div>
+        </nav>
+    </header>
 
-<!--CONTENU DE LA PAGE-->
+<!-- CONTENU DE LA PAGE -->
     <div class="container mt-5 border border-black">
-        <h2 class="text-center mt-5 ml-3">
-            Connexion
-        </h2>
+        <h2 class="text-center mt-5 ml-3">Connexion</h2>
         <form id="signup-form" class="form-group">
             <input type="email" id="email" class="form-control mb-3" placeholder="Votre email" required>
             <input type="password" id="password" class="form-control mb-3" placeholder="Votre mot de passe" required>
@@ -32,6 +35,8 @@
         </form>
         <p id="message" class="mt-3"></p>
     </div>
+
+    <p class="text-center mt-5 ml-3">Vous n'avez pas de compte ? <a href="inscription.html">Inscrivez-vous</a></p>
 
     <script>
         const form = document.getElementById('signup-form');
@@ -47,20 +52,32 @@
 
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('password-confirm').value;
 
             if (!isValidDomain(email)) {
                 message.textContent = "Seuls les membres de La Plateforme peuvent se connecter.";
                 message.style.color = "red";
                 return;
             }
+
             if (password.length < 8) {
-                message.textContent = "Le mot de passe est invalide.";
+                message.textContent = "Le mot de passe doit contenir au moins 8 caractères.";
                 message.style.color = "red";
                 return;
             }
 
-            message.textContent = "Connexion réussie";
+            if (password !== passwordConfirm) {
+                message.textContent = "Les mots de passe ne correspondent pas.";
+                message.style.color = "red";
+                return;
+            }
+
+            message.textContent = "Connexion réussi.";
             message.style.color = "green";
+
+            setTimeout(() => {
+                window.location.href = "calendrier.html"; 
+            }, 1000);
         });
     </script>
 </body>

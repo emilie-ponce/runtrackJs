@@ -6,6 +6,10 @@
     <title>Inscription</title>
     <!-- Lien vers le CSS de Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -35,6 +39,8 @@
         <p id="message" class="mt-3"></p>
     </div>
 
+    <p class="text-center mt-5 ml-3">Vous avez déjà un compte ? <a href="connexion.html">Connectez-vous</a></p>
+
     <script>
         const form = document.getElementById('signup-form');
         const message = document.getElementById('message');
@@ -63,6 +69,10 @@
 
             message.textContent = "Inscription réussie";
             message.style.color = "green";
+            
+            setTimeout(() => {
+                window.location.href = "calendrier.html"; 
+            }, 1000);
         });
     </script>
 </body>
